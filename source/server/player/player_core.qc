@@ -55,8 +55,9 @@ void() Test_RunAllTests;
 #define PLAYER_ANIM_WALK 				1
 #define PLAYER_ANIM_SPRINT				2
 
-#define PLAYER_STARTPOINTS_NORMAL		500
-#define PLAYER_STARTPOINTS_LATE			1500
+// Fork mod: faster early buys (was 500 / 1500 in stock NZ:P)
+#define PLAYER_STARTPOINTS_NORMAL		2500
+#define PLAYER_STARTPOINTS_LATE			4000
 
 //
 // Player 3rd Person Animations
