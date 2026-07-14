@@ -1000,7 +1000,8 @@ void() mystery_box =
 
     // Cost
 	if (!self.cost) {
-		self.cost = 950;
+		// Fork: cheaper mystery box for faster early loadouts (stock 950)
+self.cost = 750;
 	}
 
     // Open Sound

@@ -1049,11 +1049,9 @@ void() PlayerSpawn =
 	self.new_ofs_z = self.view_ofs_z;
 	self.oldz = self.origin_z;
 	self.grenades = self.grenades | 1;  // add frag grenades to player inventory
-	
-	if (rounds)
-		self.primary_grenades = 2;
-	else
-		self.primary_grenades = 0; 		// start off without grenades
+
+	// Fork: always start with 2 frags (stock only gave them after round start)
+	self.primary_grenades = 2;
 		
 	self.pri_grenade_state = 0; 		// defines that frag grenades are for player first, not betty
 	self.secondary_grenades = -1;		// shows that we both don't have betties AND shouldn't draw the image onscreen

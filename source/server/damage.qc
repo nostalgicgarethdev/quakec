@@ -32,15 +32,16 @@ void(entity attacker, float death_style) Gamemode_DieHandler;
 float(float current_earned_score, float damage_style) Gamemode_ScoreForDamage;
 float(float current_health_delay, float current_perks) Gamemode_GetHealthRegenDelayForPlayer;
 
-#define DMG_SCORE_HEADSHOT		100 	// Death by Headshot
-#define DMG_SCORE_MELEE			130		// Death by Melee
-#define DMG_SCORE_UPPERTORSO	60		// Death by gunshot, upper torso.
-#define DMG_SCORE_LOWERTORSO	50 		// Death by gunshot, lower torso.
+// Fork: slightly juicier scoring (stock 100/130/60/50/10)
+#define DMG_SCORE_HEADSHOT		110 	// Death by Headshot
+#define DMG_SCORE_MELEE			140		// Death by Melee
+#define DMG_SCORE_UPPERTORSO	70		// Death by gunshot, upper torso.
+#define DMG_SCORE_LOWERTORSO	55 		// Death by gunshot, lower torso.
 #define DMG_SCORE_GRENADE		50 		// Death by Grenade.
 #define DMG_SCORE_EXPLOSIVE		60  	// Death by Explosive Weapon.
 #define DMG_SCORE_TESLA			50  	// Death by Tesla.
 #define DMG_SCORE_FLOPPER		50		// Death by PhD Flopper
-#define DMG_SCORE_STDDAMAGE		10  	// Standard Damage reward.
+#define DMG_SCORE_STDDAMAGE		15  	// Standard Damage reward.
 
 void() Barrel_Hit;
 void() teddy_react;

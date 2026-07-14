@@ -821,7 +821,8 @@ float(float wep) getWeaponAmmo =
 	switch (wep)
 	{
 		case W_COLT:
-			weapon_ammo = 80;
+			// Fork: more reserve for the starter pistol
+			weapon_ammo = 100;
 			break;
 		case W_BIATCH:
 			weapon_ammo = 50;
@@ -997,7 +998,8 @@ float(float wep, float weapon_tier) getWeaponDamage =
 	switch (wep)
 	{
 		case W_COLT:
-			weapon_damage = 20;
+			// Fork: slightly stronger starter pistol for early rounds
+			weapon_damage = 30;
 			break;
 		case W_BIATCH:
 			weapon_damage = 1000;

@@ -1565,15 +1565,17 @@ void() spawn_zombie =
 void(entity where) spawn_a_zombieB;
 void() set_z_health =
 {
+	// Fork: slightly softer early curve so Colt/early guns feel better;
+	// late rounds still scale hard (stock: 50 + rounds*100 until R10).
 	if(rounds <= 10)
 	{
-		z_health = 50 + (rounds * 100);
+		z_health = 50 + (rounds * 85);
 	}
 	else
 	{	
 		local float i;
 		i = rounds - 10;
-		z_health = 1040;
+		z_health = 50 + (10 * 85); // match R10 of the early curve (~900)
 		while(i > 0)
 		{
 			z_health *= 1.1; 
